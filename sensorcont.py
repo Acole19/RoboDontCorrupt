@@ -7,3 +7,5 @@ rt_sensor = 17
 rt_wheel = 2
 lft_wheel = 1
 RPL.servoWrite(0,0)
+command =
+RPL.servoWrite(
