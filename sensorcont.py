@@ -16,16 +16,46 @@ if command == "left":
     direction = raw_input("> ")
     if direction == "forward":
         RPL.servoWrite(lft_wheel,forward)
+        followup = raw_input("> ")
+        if followup == "stop":
+            RPL.servoWrite(lft_wheel,0)
+            RPL.servoWrite(rt_wheel,0)
     elif direction == "backward":
         RPL.servoWrite(lft_wheel,backward)
+        followup = raw_input("> ")
+        if followup == "stop":
+            RPL.servoWrite(lft_wheel,0)
+            RPL.servoWrite(rt_wheel,0)
 elif command == "right":
     direction = raw_input("> ")
     if direction == "forward":
         RPL.servoWrite(rt_wheel,forward)
+        followup = raw_input("> ")
+        if followup == "stop":
+            RPL.servoWrite(lft_wheel,0)
+            RPL.servoWrite(rt_wheel,0)
     elif direction == "backward":
         RPL.servoWrite(rt_wheel,backward)
+        followup = raw_input("> ")
+        if followup == "stop":
+            RPL.servoWrite(lft_wheel,0)
+            RPL.servoWrite(rt_wheel,0)
 elif command == "both":
-    retrn()
+    direction = raw_input("> ")
+    if direction == "forward":
+        RPL.servoWrite(lft_wheel,backward)
+        RPL.servoWrite(rt_wheel,forward)
+        followup = raw_input("> ")
+        if followup == "stop":
+            RPL.servoWrite(lft_wheel,0)
+            RPL.servoWrite(rt_wheel,0)
+    elif direction == "backward":
+        RPL.servoWrite(rt_wheel,backward)
+        RPL.servoWrite(lft_wheel,forward)
+        followup = raw_input("> ")
+        if followup == "stop":
+            RPL.servoWrite(lft_wheel,0)
+            RPL.servoWrite(rt_wheel,0)
 elif command == "stop":
     RPL.servoWrite(lft_wheel,0)
     RPL.servoWrite(rt_wheel,0)
