@@ -15,14 +15,14 @@ def usercont():
     command = raw_input("> ")
     if command == "left":
         direction = raw_input("> ")
-        if direction == "forward":
+        if direction == "backward":
             RPL.servoWrite(lft_wheel,forward)
             followup = raw_input("> ")
             if followup == "stop":
                 RPL.servoWrite(lft_wheel,0)
                 RPL.servoWrite(rt_wheel,0)
                 retrn()
-        elif direction == "backward":
+        elif direction == "forward":
             RPL.servoWrite(lft_wheel,backward)
             followup = raw_input("> ")
             if followup == "stop":
@@ -31,14 +31,14 @@ def usercont():
                 retrn()
     elif command == "right":
         direction = raw_input("> ")
-        if direction == "forward":
+        if direction == "backward":
             RPL.servoWrite(rt_wheel,forward)
             followup = raw_input("> ")
             if followup == "stop":
                 RPL.servoWrite(lft_wheel,0)
                 RPL.servoWrite(rt_wheel,0)
                 retrn()
-        elif direction == "backward":
+        elif direction == "forward":
             RPL.servoWrite(rt_wheel,backward)
             followup = raw_input("> ")
             if followup == "stop":
@@ -47,7 +47,7 @@ def usercont():
                 retrn()
     elif command == "both":
         direction = raw_input("> ")
-        if direction == "forward":
+        if direction == "backward":
             RPL.servoWrite(lft_wheel,backward)
             RPL.servoWrite(rt_wheel,forward)
             followup = raw_input("> ")
@@ -55,7 +55,7 @@ def usercont():
                 RPL.servoWrite(lft_wheel,0)
                 RPL.servoWrite(rt_wheel,0)
                 retrn()
-        elif direction == "backward":
+        elif direction == "forward":
             RPL.servoWrite(rt_wheel,backward)
             RPL.servoWrite(lft_wheel,forward)
             followup = raw_input("> ")
