@@ -15,14 +15,14 @@ def usercont():
     command = raw_input("> ")
     if command == "left":
         direction = raw_input("> ")
-        if direction == "backward":
+        if direction == "forward":
             RPL.servoWrite(lft_wheel,forward)
             followup = raw_input("> ")
             if followup == "stop":
                 RPL.servoWrite(lft_wheel,0)
                 RPL.servoWrite(rt_wheel,0)
                 retrn()
-        elif direction == "forward":
+        elif direction == "backward":
             RPL.servoWrite(lft_wheel,backward)
             followup = raw_input("> ")
             if followup == "stop":
