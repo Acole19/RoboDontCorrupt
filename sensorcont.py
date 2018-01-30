@@ -26,3 +26,6 @@ elif command == "right":
         RPL.servoWrite(rt_wheel,backward)
 elif command == "both":
     retrn()
+else command == stop:
+    RPL.servoWrite(lft_wheel,0)
+    RPL.servoWrite(rt_wheel,0)
