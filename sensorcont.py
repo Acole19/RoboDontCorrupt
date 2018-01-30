@@ -66,5 +66,8 @@ def usercont():
     elif command == "stop":
         RPL.servoWrite(lft_wheel,0)
         RPL.servoWrite(rt_wheel,0)
+    else:
+        RPL.servoWrite(lft_wheel,0)
+        RPL.servoWrite(rt_wheel,0)
 
 usercont()
