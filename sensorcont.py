@@ -1,6 +1,6 @@
 import setup
 from setup import RPL
-import post_to_web.py as PTW
+import post_to_web as PTW
 def retrn():
     exit(0)
 back_sensor = 16
