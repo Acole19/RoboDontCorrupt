@@ -6,7 +6,7 @@ def retrn():
 back_sensor = 16
 left_sensor = 18
 rt_sensor = 17
-rt_wheel = 2
+rt_wheel = 0
 lft_wheel = 1
 forward = 1000
 backward = 2000
