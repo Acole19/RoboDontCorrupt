@@ -16,3 +16,10 @@ if command == "left":
         RPL.servoWrite(lft_wheel,forward)
     elif direction == "backward":
         RPL.servoWrite(lft_wheel,backward)
+elif command == "right":
+    direction = raw_input("> ")
+    if direction == "forward":
+        RPL.servoWrite(rt_wheel,forward)
+    elif direction == "backward":
+        RPL.servoWrite(rt_wheel,backward)
+elif command == "both":
