@@ -94,7 +94,7 @@ def sensorcont():
             elif RPL.readDistance(rt_sensor) < 7000 and RPL.readDistance(rt_sensor) > 4000:
                 RPL.servoWrite(lft_wheel,1000)
                 RPL.servoWrite(rt_wheel,2000)
-            if cease == stop:
+            if cease == "stop":
                 stop == 1
         RPl.servoWrite(0,0)
         RPL.servoWrite(1,0)
