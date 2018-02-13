@@ -83,8 +83,8 @@ def sensorcont():
     if command == "forward":
         RPL.servoWrite(rt_wheel,backward)
         RPL.servoWrite(lft_wheel,forward)
-        stop == False
-        while stop = False:
+        stop = 4
+        while stop != 1:
             cease = raw_input("> ")
             if RPL.readDistance(rt_sensor) < 4000:
                 RPL.servoWrite(lft_wheel,0)
@@ -95,7 +95,7 @@ def sensorcont():
                 RPL.servoWrite(lft_wheel,1000)
                 RPL.servoWrite(rt_wheel,2000)
             if cease == stop:
-                stop == True
+                stop == 1
 
 
 sensorcont()
