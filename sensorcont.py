@@ -96,6 +96,8 @@ def sensorcont():
                 RPL.servoWrite(rt_wheel,2000)
             if cease == stop:
                 stop == 1
+        RPl.servoWrite(0,0)
+        RPL.servoWrite(1,0)
 
 
 sensorcont()
