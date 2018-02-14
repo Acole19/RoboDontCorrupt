@@ -16,6 +16,6 @@ def rearreasp():
     backward = 2000
     while True:
         if Distance() < 50000:
-            motorForw():
+            motorForw()
         else:
             h = 7
