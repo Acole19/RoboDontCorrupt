@@ -7,7 +7,9 @@ def Distance():
 def motorForw():
     RPL.servoWrite(1,2000)
     RPL.servoWrite(0,1000)
-
+def motorstop():
+    RPL.servoWrite(1,000)
+    RPL.servoWrite(0,000)
 def rearreasp():
     back_sensor = 16
     rt_wheel = 0
@@ -18,5 +20,5 @@ def rearreasp():
         if Distance() < 50000:
             motorForw()
         else:
-            h = 7
+            motorstop()
 rearreasp()
