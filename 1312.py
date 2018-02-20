@@ -1,9 +1,9 @@
 import time
 import setup
 from setup import RPL
-def div3:
+def div3():
     return time.time() % 3
-def div5:
+def div5():
     return time.time() % 5
 
 while True:
