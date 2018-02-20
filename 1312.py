@@ -2,17 +2,9 @@ import time
 import setup
 from setup import RPL
 z = time.time()
-def div3():
-    y = z - time.time()
-    h = y % 3
-    return h
-def div5():
-    y = z - time.time()
-    g = y % 5
-    return g
 
 while True:
-    y = z - time.time()
+    y = time.time() - z
     if y % 4 == 0:
         RPL.servoWrite(1,2000)
         RPL.servoWrite(0,1000)
