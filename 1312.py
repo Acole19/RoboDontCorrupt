@@ -10,7 +10,7 @@ while True:
     if div3() == 0 and div5() == 0:
       RPL.servoWrite(1,1000)
       RPL.servoWrite(0,2000)
-    elif div3() == 0 and div5() != 0:
+  elif div3() == 0 and div5() != 0:
       RPL.servoWrite(1,2000)
   elif div3() != 0 and div5 == 0:
       RPL.servoWrite(0,1000)
