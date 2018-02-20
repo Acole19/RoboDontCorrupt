@@ -8,7 +8,7 @@ def div5():
     g = time.time() % 5
     return g
 
-for x in (1,1000):
+while True:
     if div3() == 0 and div5() == 0:
         RPL.servoWrite(1,1000)
         RPL.servoWrite(0,2000)
