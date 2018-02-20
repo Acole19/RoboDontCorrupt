@@ -1,11 +1,14 @@
 import time
 import setup
 from setup import RPL
+z = time.time()
 def div3():
-    h = time.time() % 3
+    y = z - time.time()
+    h = y % 3
     return h
 def div5():
-    g = time.time() % 5
+    y = z - time.time()
+    g = y % 5
     return g
 
 while True:
