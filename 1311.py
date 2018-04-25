@@ -26,4 +26,5 @@ def rearreasp():
             motorstop()
         if RPL.readDistance(17) < 1000:
             condit = 16.5
+    motorstop()
 rearreasp()
