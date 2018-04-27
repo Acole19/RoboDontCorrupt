@@ -33,6 +33,7 @@ while condit != 16:
     if Distance() > 10000:
         motorRight()
         time.sleep(.5)
+    motorForw()
 
 
 motorstop()
