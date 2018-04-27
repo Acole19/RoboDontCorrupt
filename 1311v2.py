@@ -1,7 +1,7 @@
 import setup
 from setup import RPL
 import post_to_web as PTW
-
+import time
 def Distance():
     return RPL.readDistance(16)
 def motorForw():
