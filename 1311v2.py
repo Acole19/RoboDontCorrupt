@@ -10,10 +10,10 @@ def motorForw():
 def motorstop():
     RPL.servoWrite(1,000)
     RPL.servoWrite(2,000)
-def motorRight():
+def motorLeft():
     RPL.servoWrite(1,000)
     RPL.servoWrite(2,1000)
-def motorLeft():
+def motorRight():
     RPL.servoWrite(1,2000)
     RPL.servoWrite(2,000)
 back_sensor = 16
