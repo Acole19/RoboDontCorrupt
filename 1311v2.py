@@ -30,9 +30,10 @@ while condit != 16:
     if Distance() > 50000:
         motorLeft()
         time.sleep(.5)
-    if Distance() > 10000:
+    elif Distance() < 10000:
         motorRight()
         time.sleep(.5)
+    else:
     motorForw()
 
 
