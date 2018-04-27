@@ -40,4 +40,4 @@ while condit != 16:
 
 
 motorstop()
-print x
+print x #prints the total number of times a sycle went with a Distance value imbetween 50000 and 10000
