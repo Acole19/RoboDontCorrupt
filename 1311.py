@@ -22,7 +22,7 @@ lft_wheel = 1
 forward = 1000
 backward = 2000
 condit = 7
-while condit != 16.5:
+while condit != 16:
     motorstop()
     Distance()
     while Distance() < 50000 and Distance() > 10000:
@@ -32,5 +32,5 @@ while condit != 16.5:
     while Distance() > 10000:
         motorRight
     if RPL.readDistance(17) < 1000:
-        condit = 16.5
+        condit = 16
 motorstop()
