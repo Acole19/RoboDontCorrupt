@@ -22,6 +22,7 @@ lft_wheel = 1
 forward = 1000
 backward = 2000
 condit = 7
+x = 0
 while condit != 16:
     motorForw()
     Distance()
@@ -34,7 +35,9 @@ while condit != 16:
         motorRight()
         time.sleep(.5)
     else:
+        x += 1
     motorForw()
 
 
 motorstop()
+print x
