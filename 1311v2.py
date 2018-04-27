@@ -25,6 +25,8 @@ condit = 7
 while condit != 16:
     motorForw()
     Distance()
+    if RPL.readDistance(17) < 1000:
+        condit = 16
     if Distance() < 50000 and Distance() > 10000:
         motorForw()
     elif Distance() > 50000:
@@ -32,6 +34,4 @@ while condit != 16:
     elif Distance() > 10000:
         motorRight
     
-    if RPL.readDistance(17) < 1000:
-        condit = 16
 motorstop()
