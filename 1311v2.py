@@ -25,7 +25,6 @@ condit = 7
 x = 0
 while condit != 16:
     motorForw()
-    Distance()
     if RPL.readDistance(17) < 1000:
         condit = 16
     if Distance() > 50000:
