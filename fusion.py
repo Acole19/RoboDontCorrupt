@@ -2,10 +2,6 @@ import setup
 from setup import RPL
 import post_to_web as PTW
 import time
-z = 3
-rear = 17
-left = 1
-right = 0
 def Distance():
     return RPL.readDistance(16)
 def motorForw():
@@ -21,6 +17,7 @@ def motorRight():
     RPL.servoWrite(1,2000)
     RPL.servoWrite(2,000)
 left_sensor = 16
+rear = 17
 rt_wheel = 0
 lft_wheel = 1
 forward = 1000
