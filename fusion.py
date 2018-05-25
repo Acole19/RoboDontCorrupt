@@ -13,7 +13,7 @@ x = 0
 while condit != 18:
     RPL.servoWrite(1,2000)
     RPL.servoWrite(2,1000)
-    if RPL.readDistance(rear) < 1000:
+    if RPL.readDistance(17) < 1000:
         RPL.servoWrite(2,0)
         RPL.servoWrite(1,0)
         condit = 18
