@@ -2,18 +2,6 @@ import setup
 from setup import RPL
 import post_to_web as PTW
 import time
-def motorForw():
-    RPL.servoWrite(1,2000)
-    RPL.servoWrite(2,1000)
-def motorstop():
-    RPL.servoWrite(1,000)
-    RPL.servoWrite(2,000)
-def motorLeft():
-    RPL.servoWrite(1,000)
-    RPL.servoWrite(2,1000)
-def motorRight():
-    RPL.servoWrite(1,2000)
-    RPL.servoWrite(2,000)
 left_sensor = 16
 rear = 17
 rt_wheel = 0
@@ -22,8 +10,9 @@ forward = 1000
 backward = 2000
 condit = 7
 x = 0
-while condit != 16:
-    motorForw()
+while condit != 18:
+    RPL.servoWrite(1,2000)
+    RPL.servoWrite(2,1000)
     if x > 10:
         z = 3
         while z == 3:
@@ -42,15 +31,18 @@ while condit != 16:
                 RPL.servoWrite(1,0)
                 z = 5
     if RPL.readDistance(17) < 1000:
-        condit = 16
+        condit = 18
     if RPL.readDistance(16) > 50000:
-        motorLeft()
+        RPL.servoWrite(1,000)
+        RPL.servoWrite(2,1000)
         time.sleep(.5)
         x += 1
     elif RPL.readDistance(16) < 10000:
-        motorRight()
+        RPL.servoWrite(1,2000)
+        RPL.servoWrite(2,000)
         time.sleep(.5)
         x += 1
     else:
         x += 1
-    motorForw()
+    RPL.servoWrite(1,2000)
+    RPL.servoWrite(2,1000)
