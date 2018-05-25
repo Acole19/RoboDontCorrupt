@@ -27,19 +27,20 @@ x = 0
 while condit != 16:
     motorForw()
     if x > 10:
+        z = 3
         while z == 3:
             if RPL.readDistance(rear) < 1000:
-                RPL.servoWrite(0,0)
+                RPL.servoWrite(2,0)
                 RPL.servoWrite(1,0)
                 z = 5
             if RPL.readDistance(rear) > 40000:
                 RPL.servoWrite(1,1500)
-                RPL.servoWrite(0,500)
+                RPL.servoWrite(2,500)
             if RPL.readDistance(rear) > 70000:
                 RPL.servoWrite(1,2500)
-                RPL.servoWrite(0,1499)
+                RPL.servoWrite(2,1499)
             if RPL.readDistance(rear) < 1000:
-                RPL.servoWrite(0,0)
+                RPL.servoWrite(2,0)
                 RPL.servoWrite(1,0)
                 z = 5
     if RPL.readDistance(17) < 1000:
@@ -55,6 +56,19 @@ while condit != 16:
     else:
         x += 1
     motorForw()
-
-
-motorstop()
+z = 3
+while z == 3:
+    if RPL.readDistance(rear) < 1000:
+        RPL.servoWrite(2,0)
+        RPL.servoWrite(1,0)
+        z = 5
+    if RPL.readDistance(rear) > 40000:
+        RPL.servoWrite(1,1500)
+        RPL.servoWrite(2,500)
+    if RPL.readDistance(rear) > 70000:
+        RPL.servoWrite(1,2500)
+        RPL.servoWrite(2,1499)
+    if RPL.readDistance(rear) < 1000:
+        RPL.servoWrite(2,0)
+        RPL.servoWrite(1,0)
+        z = 5
