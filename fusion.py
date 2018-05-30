@@ -43,7 +43,7 @@ while condit != 18:
                 RPL.servoWrite(1,0)
                 z = 5
                 condit = 18
-    if RPL.readDistance(16) > 50000:
+    if RPL.readDistance(16) > 30000:
         RPL.servoWrite(1,000)
         RPL.servoWrite(2,1000)
         time.sleep(.5)
@@ -57,12 +57,11 @@ while condit != 18:
         x += 1
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,1000)
-    elif RPL.readDistance(16) > 10000 and RPL.readDistance(16) < 50000:
-        x += 1
-        RPL.servoWrite(1,2000)
-        RPL.servoWrite(2,1000)
     else:
         x += 1
+        RPL.servoWrite(2,0)
+        RPL.servoWrite(1,0)
+        time.sleep(.1)
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,1000)
 
