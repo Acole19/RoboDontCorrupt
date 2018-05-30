@@ -17,7 +17,7 @@ while condit != 18:
         RPL.servoWrite(2,0)
         RPL.servoWrite(1,0)
         condit = 18
-    if x > 50:
+    if x >= 10:
         z = 3
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,0000)
