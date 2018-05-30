@@ -19,6 +19,14 @@ while condit != 18:
         condit = 18
     if x > 50:
         z = 3
+        RPL.servoWrite(1,2000)
+        RPL.servoWrite(2,0000)
+        time.sleep(.5)
+        RPL.servoWrite(1,2000)
+        RPL.servoWrite(2,1000)
+        time.sleep(.5)
+        RPL.servoWrite(1,1500)
+        RPL.servoWrite(2,500)
         while z == 3:
             if RPL.readDistance(rear) < 1000:
                 RPL.servoWrite(2,0)
