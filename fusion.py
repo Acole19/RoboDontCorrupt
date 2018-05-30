@@ -2,8 +2,8 @@ import setup
 from setup import RPL
 import post_to_web as PTW
 import time
-left_sensor = 16
-rear = 17
+left_sensor = 15
+rear = 16
 rt_wheel = 0
 lft_wheel = 1
 forward = 1000
@@ -13,7 +13,7 @@ x = 0
 while condit != 18:
     RPL.servoWrite(1,2000)
     RPL.servoWrite(2,1000)
-    if RPL.readDistance(17) < 1000:
+    if RPL.readDistance(16) < 1000:
         RPL.servoWrite(2,0)
         RPL.servoWrite(1,0)
         condit = 18
@@ -43,14 +43,14 @@ while condit != 18:
                 RPL.servoWrite(1,0)
                 z = 5
                 condit = 18
-    if RPL.readDistance(16) > 100000:
+    if RPL.readDistance(15) > 100000:
         RPL.servoWrite(1,000)
         RPL.servoWrite(2,1000)
         time.sleep(.5)
         x += 1
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,1000)
-    elif RPL.readDistance(16) < 10000:
+    elif RPL.readDistance(15) < 10000:
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,000)
         time.sleep(.5)
