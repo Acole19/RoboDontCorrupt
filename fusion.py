@@ -59,9 +59,6 @@ while condit != 18:
         RPL.servoWrite(2,1000)
     else:
         x += 1
-        RPL.servoWrite(2,0)
-        RPL.servoWrite(1,0)
-        time.sleep(.1)
         RPL.servoWrite(1,2000)
         RPL.servoWrite(2,1000)
 
